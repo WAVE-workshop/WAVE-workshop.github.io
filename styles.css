@@ -723,3 +723,52 @@ tbody tr:nth-child(even) {
     padding-top: 96px;
   }
 }
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  /* 整体留白 */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* 顶部导航 */
+  .nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* ===== HERO 区域（最关键） ===== */
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  /* 左侧波形 logo */
+  .hero img {
+    width: clamp(100px, 15vw, 220px);
+    margin-bottom: 20px;
+  }
+
+  /* WAVE 主标题 */
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 64px);
+  }
+
+  /* Women in Algorithms 那一行 */
+  .hero .subtitle {
+    font-size: clamp(14px, 2vw, 22px);
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  /* 日期 + 地点 */
+  .hero .meta {
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+}
