@@ -775,7 +775,7 @@ tbody tr:nth-child(even) {
   .hero-logo-right {
     width: 100%;
     padding-top: 2px;
-    transform: translate(-25px, 25px);  /* 👈 往左移 */
+    transform: translate(-25px, 20px);  /* 👈 往左移 */
   }
 
   /* 关键：保持横排，不要改成 column */
@@ -788,9 +788,12 @@ tbody tr:nth-child(even) {
   }
   
   .hero-tagline {
-    font-size: 0.69rem;   /* 👈 再缩小 */
+    font-size: 0.65rem;   /* 👈 再缩小 */
     line-height: 1.45;
     letter-spacing: 0.1px;
+    text-align: left; 
+    margin-left: auto; 
+    max-width: 220px;
   }
 
   .hero-divider {
@@ -813,7 +816,7 @@ tbody tr:nth-child(even) {
     justify-content: space-between;
     align-items: center;
     gap: 10px;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     padding: 0;
   }
 
