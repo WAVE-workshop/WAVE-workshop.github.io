@@ -775,7 +775,7 @@ tbody tr:nth-child(even) {
   .hero-logo-right {
     width: 100%;
     padding-top: 2px;
-    transform: translate(-25px, 20px);  /* 👈 往左移 */
+    transform: translate(-20px, 20px);  /* 👈 往左移 */
   }
 
   /* 关键：保持横排，不要改成 column */
@@ -798,7 +798,7 @@ tbody tr:nth-child(even) {
 .hero-divider {
   display: block;
   width: 1px;
-  height: 28px;
+  height: 100%;
   background: #0f1c25;
   opacity: 0.45;
   align-self: center;
