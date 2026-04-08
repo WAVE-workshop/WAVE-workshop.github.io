@@ -726,6 +726,9 @@ tbody tr:nth-child(even) {
 
 /* ===== MOBILE RESPONSIVE ===== */
 @media (max-width: 900px) {
+.brand {
+    display: none;
+  }
   .two-col,
   .committee-grid {
     grid-template-columns: 1fr;
@@ -756,62 +759,73 @@ tbody tr:nth-child(even) {
   }
 
   /* 关键：手机上也保持 logo 在左，文字在右 */
+  .hero-inner {
+    padding-top: 140px;
+    padding-bottom: 60px;
+  }
+
   .hero-banner {
     width: min(var(--maxw), calc(100% - 24px));
-    margin: 0 auto;
     display: grid;
-    grid-template-columns: 110px 1fr;
-    gap: 18px;
+    grid-template-columns: 90px 1fr;
+    gap: 14px;
     align-items: start;
   }
 
   .hero-logo-left img {
-    width: 110px;
+    width: 90px;
     height: auto;
-    transform: translateY(0);
+    transform: none;
   }
 
   .hero-logo-right {
     width: 100%;
-    padding-top: 8px;
+    padding-top: 2px;
     transform: none;
   }
 
-  /* 关键：WAVE 和 slogan 保持上下两层，但都在 logo 右侧 */
+  /* 关键：保持横排，不要改成 column */
   .hero-topline {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     gap: 10px;
+    width: 100%;
   }
 
   .hero-divider {
-    display: none;
+    display: block;
+    width: 1px;
+    height: 42px;
   }
 
   .hero-wave-text {
-    font-size: clamp(44px, 10vw, 64px);
+    font-size: 2.7rem;
     line-height: 0.95;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    flex-shrink: 0;
   }
 
   .hero-tagline {
+    font-size: 0.95rem;
+    line-height: 1.15;
+    letter-spacing: 0.1px;
     transform: none;
-    font-size: clamp(14px, 4vw, 22px);
-    line-height: 1.2;
-    letter-spacing: 0.3px;
   }
 
-  /* 日期和地点也放在右侧文字区里，竖排更稳 */
   .hero-meta-line {
-    margin-top: 18px;
+    margin-top: 14px;
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-    font-size: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    font-size: 0.95rem;
     padding: 0;
+  }
+
+  .page-hero {
+    padding-top: 130px;
   }
 
   /* About 区手机端不要太大 */
