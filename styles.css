@@ -759,7 +759,7 @@ tbody tr:nth-child(even) {
   }
 
   .hero-banner {
-    width: min(var(--maxw), calc(100% - 24px));
+    width: min(var(--maxw), calc(100% - 10px));
     display: grid;
     grid-template-columns: 90px 1fr;
     gap: 10px;
@@ -775,50 +775,57 @@ tbody tr:nth-child(even) {
   .hero-logo-right {
     width: 100%;
     padding-top: 2px;
-    transform: translate(-30px, 25px);  /* 👈 往左移 */
+    transform: translate(-25px, 20px);  /* 👈 往左移 */
   }
 
   /* 关键：保持横排，不要改成 column */
-  .hero-topline {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    gap: 10px;
-    width: 100%;
-  }
-  
-  .hero-tagline {
-    font-size: 0.60rem;   /* 👈 再缩小 */
-    line-height: 1.45;
-    letter-spacing: 0.1px;
-    text-align: left; 
-    margin-left: auto; 
-    max-width: 150px;
-  }
+    
+.hero-topline {
+  display: grid;
+  grid-template-columns: auto 1px 1fr;
+  align-items: start;
+  column-gap: 8px;
+  width: 100%;
+  text-align: right
+}
 
-  .hero-divider {
-    display: block;
-    width: 1px;
-    height: 30px;
-  }
+.hero-wave-text {
+  font-size: 2rem;
+  line-height: 0.95;
+  letter-spacing: 0.3px;
+}
 
-  .hero-wave-text {
-    font-size: 1.5rem;
-    line-height: 0.95;
-    letter-spacing: 0.3px;
-    flex-shrink: 0;
-  }
-  
-  .hero-meta-line {
-    margin-top: 14px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.65rem;
-    padding: 0;
-  }
+.hero-divider {
+  display: block;
+  width: 1px;
+  height: 28px;
+  background: #0f1c25;
+  opacity: 0.45;
+  align-self: center;
+}
+
+.hero-tagline {
+  font-size: 0.7rem;
+  line-height: 1.3;
+  letter-spacing: 0;
+  text-align: left;
+  white-space: nowrap;
+  max-width: none;
+  margin-left: 0;
+  justify-self: stretch;
+}
+
+.hero-meta-line {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  column-gap: 8px;
+  width: 100%;
+  font-size: 0.6rem;
+  padding: 0;
+  text-align: right
+}
 
   .page-hero {
     padding-top: 130px;
