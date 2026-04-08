@@ -762,20 +762,20 @@ tbody tr:nth-child(even) {
     width: min(var(--maxw), calc(100% - 24px));
     display: grid;
     grid-template-columns: 90px 1fr;
-    gap: 14px;
+    gap: 10px;
     align-items: start;
   }
 
   .hero-logo-left img {
     width: 90px;
     height: auto;
-    transform: none;
+    transform: translateY(-40px);
   }
 
   .hero-logo-right {
     width: 100%;
     padding-top: 2px;
-    transform: none;
+    transform: translate(-25px, 25px);  /* 👈 往左移 */
   }
 
   /* 关键：保持横排，不要改成 column */
@@ -786,35 +786,34 @@ tbody tr:nth-child(even) {
     gap: 10px;
     width: 100%;
   }
+  
+  .hero-tagline {
+    font-size: 0.69rem;   /* 👈 再缩小 */
+    line-height: 1.45;
+    letter-spacing: 0.1px;
+  }
 
   .hero-divider {
     display: block;
     width: 1px;
-    height: 42px;
+    height: 30px;
   }
 
   .hero-wave-text {
-    font-size: 2.7rem;
+    font-size: 2rem;
     line-height: 0.95;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     flex-shrink: 0;
   }
-
-  .hero-tagline {
-    font-size: 0.95rem;
-    line-height: 1.15;
-    letter-spacing: 0.1px;
-    transform: none;
-  }
-
+  
   .hero-meta-line {
     margin-top: 14px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
-    font-size: 0.95rem;
+    gap: 10px;
+    font-size: 0.6rem;
     padding: 0;
   }
 
@@ -862,31 +861,14 @@ tbody tr:nth-child(even) {
   }
 
   .person-photo {
-    width: 140px;
-    height: 180px;
+    width: 100%;
+    height: 220px;
     margin-left: 0;
   }
   
-  .speaker-card {
-    display: block;
-  }
-
-  .speaker-photo {
-    width: 100%;
-    height: 220px;
-    margin-bottom: 16px;
-    border-radius: 16px;
-    overflow: hidden;
-  }
-
-  .speaker-photo img {
+  .person-photo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
-  }
-
-  .speaker-content {
-    padding-left: 0;
   }
 }
