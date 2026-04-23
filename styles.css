@@ -394,6 +394,12 @@ main section {
    transform: scale(1.1); 
 }
 
+.person-photo img.speaker-qi {
+/*  object-position: 10% 10%;
+   transform: scale(1); */
+   object-position: center;
+}
+
 .person-name {
   margin: 0 0 4px;
   color: var(--primary);
