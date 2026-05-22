@@ -384,7 +384,7 @@ main section {
   display: block;
 }
 
-/* 单独控制每张图的位置 */
+
 .person-photo img.speaker-johanne {
   object-position: center;
 }
@@ -610,8 +610,8 @@ tbody tr:nth-child(even) {
 }
 
 .photo-anne {
-  object-position: center 140%;
-  transform: scale(1.4);
+  object-position: center 100%;
+  transform: scale(1);
 }
 
 .photo-manon {
@@ -620,8 +620,8 @@ tbody tr:nth-child(even) {
 }
 
 .photo-sia {
-  object-position: center 45%;
-  transform: scale(2.2);
+  object-position: center 0%;
+  transform: scale(1.3);
 }
 
 .photo-hanzhi {
@@ -886,5 +886,314 @@ tbody tr:nth-child(even) {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  
+  /* ===== Archive ===== */
+/* ===== Archive ===== */
+
+.archive-section {
+  padding-top: 24px;
+}
+
+.archive-item {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 18px;
+  margin-bottom: 18px;
+}
+
+.archive-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  text-align: left;
+}
+
+.archive-title {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.archive-meta {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.96rem;
+}
+
+.archive-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  line-height: 1;
+  margin-left: 20px;
+}
+
+.archive-content {
+  display: none;
+  margin-top: 22px;
+  padding-left: 6px;
+}
+
+.archive-content.open {
+  display: block;
+}
+
+.archive-block {
+  margin-bottom: 24px;
+}
+
+.archive-block h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: var(--primary);
+}
+
+.archive-block ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.archive-block li {
+  margin-bottom: 6px;
+}
+
+.archive-block p {
+  margin: 0;
+}
+
+/* ===== Archive ===== */
+
+.archive-entry {
+  margin-bottom: 28px;
+}
+
+.archive-main {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.archive-detail-btn {
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: 8px;
+  color: #0b6edc;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* ===== Archive ===== */
+
+.archive-item {
+  margin-bottom: 20px;
+}
+
+.archive-summary {
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.archive-summary strong {
+  margin-right: 8px;
+}
+
+.archive-summary:hover {
+  opacity: 0.75;
+}
+
+.archive-detail {
+  margin-top: 8px;
+  padding-left: 22px;
+}
+
+.archive-detail p {
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+/* ===== Archive ===== */
+
+.archive-section {
+  padding-top: 24px;
+}
+
+.archive-item {
+  margin-bottom: 24px;
+}
+
+.archive-summary {
+  cursor: pointer;
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.archive-summary strong {
+  margin-right: 8px;
+}
+
+.archive-summary:hover {
+  opacity: 0.75;
+}
+
+.archive-detail {
+  margin-top: 10px;
+  padding-left: 24px;
+}
+
+.archive-detail p {
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+
+/* mobile */
+@media (max-width: 900px) {
+
+  .archive-title {
+    font-size: 1.25rem;
+  }
+
+  .archive-meta {
+    font-size: 0.85rem;
+  }
+
+  .archive-icon {
+    font-size: 1.6rem;
+  }
+}
+}
+
+/* ===== Archive redesigned ===== */
+
+.archive-section {
+  padding-top: 28px;
+  padding-bottom: 72px;
+}
+
+.archive-feature {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(360px, 1.1fr);
+  gap: 36px;
+  align-items: start;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.archive-photo-wrap {
+  width: 100%;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: #f6f8fa;
+}
+
+.archive-photo {
+  display: block;
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  object-position: center 46%;
+}
+
+.archive-info {
+  padding-top: 4px;
+}
+
+.archive-year-line {
+  margin-bottom: 18px;
+}
+
+.archive-year-line h2 {
+  margin: 0 0 6px;
+  font-size: 1.8rem;
+  line-height: 1.1;
+  color: var(--primary);
+}
+
+.archive-year-line p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.archive-intro {
+  margin: 0 0 22px;
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.archive-details {
+  margin: 12px 0;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+}
+
+.archive-details:last-child {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+
+.archive-details summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--primary);
+  font-size: 1.05rem;
+}
+
+.archive-details summary:hover {
+  opacity: 0.75;
+}
+
+.archive-details ul {
+  margin: 10px 0 0;
+  padding-left: 22px;
+}
+
+.archive-details li {
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.archive-details p {
+  margin: 10px 0 0;
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .archive-section {
+    padding-top: 18px;
+    padding-bottom: 48px;
+  }
+
+  .archive-feature {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .archive-photo {
+    height: 240px;
+  }
+
+  .archive-year-line h2 {
+    font-size: 1.5rem;
+  }
+
+  .archive-year-line p,
+  .archive-intro,
+  .archive-details li,
+  .archive-details p {
+    font-size: 0.98rem;
   }
 }
