@@ -2589,3 +2589,29 @@ Design goals:
 .sponsor-col   { align-items: center !important; }
 .sponsor-villum { height: 34px !important; }
 @media (max-width: 760px) { .sponsor-villum { height: 26px !important; } }
+
+/* ---- Mobile: right-align tagline + location so their right edges meet the body text right edge ---- */
+@media (max-width: 760px) {
+  .hero-tagline { text-align: right !important; }
+  .hero-meta-line span:last-child { justify-self: end !important; text-align: right !important; }
+}
+
+/* ---- Mobile: justify body paragraphs so their right edge reaches the container right (matches tagline/location) ---- */
+@media (max-width: 760px) {
+  .section-head p:not(.register-cta) { text-align: justify !important; }
+}
+
+/* ---- Mobile: keep tagline lines on ONE line each (no wrap); shrink to fit ---- */
+@media (max-width: 760px) {
+  .hero-tagline {
+    white-space: nowrap !important;
+    text-align: right !important;
+    font-size: clamp(8px, 2.7cqw, 36px) !important;
+    line-height: 1.18 !important;
+  }
+}
+
+/* ---- Mobile: tagline LEFT-aligned like the desktop-narrow look (longest line reaches container right; Women aligns left with Venture) ---- */
+@media (max-width: 760px) {
+  .hero-tagline { text-align: left !important; white-space: nowrap !important; }
+}
