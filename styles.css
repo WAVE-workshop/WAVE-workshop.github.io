@@ -2615,3 +2615,14 @@ Design goals:
 @media (max-width: 760px) {
   .hero-tagline { text-align: left !important; white-space: nowrap !important; }
 }
+
+/* ---- Mobile fine-tune: tagline closer to divider (match desktop coefficient) ---- */
+@media (max-width: 760px) {
+  .hero-tagline { font-size: clamp(8px, 3.05cqw, 36px) !important; }
+}
+
+/* ---- Phones only (<=560px): push WAVE block down to the logo's mid/lower area (proportional, stable) ---- */
+@media (max-width: 560px) {
+  .hero-banner { align-items: start !important; }
+  .hero-logo-right { transform: none !important; padding-top: 12cqw !important; }
+}
