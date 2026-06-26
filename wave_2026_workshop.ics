@@ -1,0 +1,16 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//WAVE Workshop//Registration Calendar//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:ffcb6353-bf89-4889-a58e-9938548e277c@wave-workshop.github.io
+DTSTAMP:20260626T063747Z
+SUMMARY:WAVE 2026 Workshop
+DTSTART;TZID=Europe/Copenhagen:20260911T093000
+DTEND;TZID=Europe/Copenhagen:20260911T180000
+LOCATION:University of Copenhagen\, Denmark
+DESCRIPTION:WAVE 2026 Workshop (Women in Algorithms\, Venture into Exploration)\nWebsite: https://wave-workshop.github.io/
+URL:https://wave-workshop.github.io/
+END:VEVENT
+END:VCALENDAR
