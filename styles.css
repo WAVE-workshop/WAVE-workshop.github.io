@@ -2723,3 +2723,46 @@ Design goals:
   font-size: 0.92rem;
   text-align: center;
 }
+
+/* Panelists (Speakers page) */
+.panelists-section { padding-top: 4px; }
+.panelists-intro { color: var(--muted); line-height: 1.7; max-width: 760px; }
+.panelist-list { list-style: none; padding: 0; margin: 16px 0 0; max-width: 760px; }
+.panelist-list li {
+  padding: 13px 0;
+  border-top: 1px solid var(--line);
+  font-size: 1.05rem;
+  color: var(--text);
+}
+.panelist-list li:first-child { border-top: none; }
+
+/* Panelists: compact 3-across row (photo + name only) */
+.panelists-section .cards {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.panelists-section .person-top {
+  grid-template-columns: 1fr;
+  gap: 14px;
+  justify-items: center;
+  text-align: center;
+}
+.panelists-section .person-photo {
+  margin-left: 0;
+  width: 150px;
+  height: 185px;
+}
+.panelists-section .person-name,
+.panelists-section .person-name a { font-size: 1.05rem; }
+@media (max-width: 760px) {
+  .panelists-section .cards { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+@media (max-width: 460px) {
+  .panelists-section .cards { grid-template-columns: 1fr; }
+}
+
+/* Panelists intro on one line */
+.panelists-intro { max-width: none; }
+
+/* Avoid single-word widows on last line */
+p, h1, h2, h3, li { text-wrap: pretty; }
